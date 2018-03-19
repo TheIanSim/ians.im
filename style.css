@@ -220,7 +220,7 @@ footer {
   100% {opacity: 1;}
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (-webkit-device-pixel-ratio:3) {
 
   li {
     display: block;
