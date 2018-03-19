@@ -1,0 +1,275 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body, html {
+  height: 100%;
+  background-color: #e5e5e5;
+}
+
+.backdrop {
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.85) ), url(images/bg.jpg);
+  background-repeat: no-repeat;
+  background-size:cover;
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  text-align: center;
+}
+
+.logo-container {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+}
+
+ul {
+  list-style: none;
+  font-size: 0;
+  padding-top: 20px;
+
+  animation-name: fade-in;
+  opacity: 0;
+  animation-duration: 1s;
+  animation-delay: 0.5s;
+  animation-fill-mode: forwards;
+  animation-timing-function:ease-in;
+}.ulnav {
+  animation-delay: 0s;
+}
+
+li {
+  font-size: 14px;
+  display: inline;
+  font-family: Montserrat, sans-serif;
+  text-transform: uppercase;
+  color: #e5e5e5;
+  font-weight: 300;
+  padding: 8px 20px;
+  border-right: 1px solid #e5e5e5;
+}
+
+li:last-child {
+    border: none;
+}
+
+h1 {
+  font-family: Montserrat ,sans-serif;
+  color: white;
+  font-weight: 100;
+  font-size: 5em;
+
+  animation-name: fade-in;
+  opacity: 0;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-timing-function:ease-in;
+}
+
+h2 {
+  font-size: 3em;
+}
+
+h3 {
+  font-size: 1.5em;
+}
+
+a {
+  text-decoration: none;
+  transition-property: color;
+  transition-duration: 0.3s;
+  color: #e5e5e5;
+}
+
+a:hover {
+  color: #00E5EE;
+}
+.active {
+  color: #00E5EE;
+}
+
+nav {
+  width: 100%;
+  top: 0;
+  background:  linear-gradient(to bottom, rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.8) );
+  height: 60px;
+  text-align: center;
+  position: fixed;
+  z-index: 100;
+}
+
+.container {
+  text-align: center;
+  height: auto;
+  width: 100%;
+  padding-top: 50px;
+
+}
+
+.right{
+  text-align: right;
+}
+
+p {
+  font-size: 1.3em;
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 20px 20px;
+  color:#2d2d2d;
+  font-size: 16px;
+  width: 65%;
+  margin: auto;
+  padding: 0px 20px;
+  box-sizing: border-box;
+  font-family: Montserrat, sans-serif;
+  line-height: 1.8;
+  text-align: left;
+
+  animation-name: fade-in;
+  opacity: 0;
+  animation-duration: 1s;
+  animation-delay: 0.5s;
+  animation-fill-mode: forwards;
+  animation-timing-function:ease-in;
+}
+
+.grid-item {
+  padding: 100px 20px;
+}
+
+
+.item0 {
+  grid-column-start: 1;
+  grid-column-end: 5;
+  border-bottom: 1px solid #2d2d2d;
+  text-align: center;
+}
+
+.item1, .item5 {
+  grid-column-start: 1;
+  grid-column-end: 4;
+}
+
+.item4 {
+  grid-column-start: 2;
+  grid-column-end: 5;
+}
+
+.my-pic {
+  margin-top: 35%;
+  vertical-align: middle;
+  width: 100%;
+  border-radius: 50%;
+}
+
+footer {
+  font-family: Montserrat, sans-serif;
+  padding: 20px;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2));
+}
+
+.dashboard-pic {
+  width: 100%;
+  box-sizing: border-box;
+  box-shadow: 3px 3px #888888;
+  margin-top: 10px;
+}
+
+.social-media-icon {
+  width: 70%;
+  margin: auto;
+  transition: .5s ease;
+}
+.social-media-icon:hover {
+    opacity: 0.3;
+}
+
+.social-media-font {
+  text-align: center;
+  font-size: 0.7em
+}
+
+.nav-icon {
+  display: none;
+  text-align: center;
+  margin: auto;
+}
+
+.icon {
+    width: 8px;
+    height: 8px;
+    background-color: #e5e5e5;
+    border-radius: 8px;
+    margin: 6px 0;
+    margin-top: 20px;
+    display:inline-block;
+}
+
+
+@keyframes fade-in {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+}
+
+@media screen and (max-width: 768px) {
+
+  li {
+    display: block;
+    border: none;
+    padding: 20px;
+  }
+
+  #topnav {
+    height: auto;
+    padding-top: 50px;
+    padding-bottom: 20px;
+    top:-100%;
+    transition-property: top;
+    transition-duration: 0.4s;
+  }
+
+  .ulnav {
+    list-style: none;
+    animation: none;
+    opacity: 1;
+    }
+
+  .nav-icon {
+    display:block;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    height: 50px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    background:  linear-gradient(to bottom, rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.8) );
+  }
+
+  .nav-icon:hover {
+    background: black;
+  }
+
+  .container {
+    padding-top: 0px;
+  }
+
+  .grid-container {
+    width: 90%
+  }
+
+  .grid-item {
+    grid-column-start: 1;
+    grid-column-end: 5;
+  }
+
+}
